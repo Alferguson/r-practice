@@ -13,6 +13,21 @@
 #Kirill Eremenko
 #www.superdatascience.com
 
+
+
+
+
+# You need to create three plots that portray the following insights:
+#   • Free Throw Attempts per game
+# • Accuracy of Free Throws
+# • Player playing style (2 vs 3 points preference) excluding Free Throws*
+#   *Each Free Throw is worth 1 point
+# The data has been supplied in the form of vectors. You will have to create the two
+# matrices before you proceed with the analysis
+
+
+
+
 #Copyright: These datasets were prepared using publicly available data.
 #           However, theses scripts are subject to Copyright Laws. 
 #           If you wish to use these R scripts outside of the R Programming Course
@@ -49,7 +64,11 @@ DerrickRose_FT <- c(146,146,146,197,259,476,194,0,27,152)
 DwayneWade_FT <- c(629,432,354,590,534,494,235,308,189,284)
 #Matrix
 #
-# <put your code here>
+
+FT.Matrix <- rbind(KobeBryant_FT, JoeJohnson_FT, LeBronJames_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, ChrisPaul_FT, KevinDurant_FT, DerrickRose_FT, DwayneWade_FT)
+rownames(FT.Matrix) <- Players
+colnames(FT.Matrix) <- Seasons
+
 #
 
 #Free Throw Attempts
@@ -65,5 +84,8 @@ DerrickRose_FTA <- c(205,205,205,250,338,555,239,0,32,187)
 DwayneWade_FTA <- c(803,535,467,771,702,652,297,425,258,370)
 #Matrix
 #
-# <put your code here>
+FTA.Matrix <- rbind(KobeBryant_FTA, JoeJohnson_FTA, LeBronJames_FTA, CarmeloAnthony_FTA, DwightHoward_FTA, ChrisBosh_FTA, ChrisPaul_FTA, KevinDurant_FTA, DerrickRose_FTA, DwayneWade_FTA)
+rownames(FT.Matrix) <- Players
+colnames(FT.Matrix) <- Seasons
+
 #
