@@ -30,7 +30,6 @@ summary(csv.data)
 ?qplot
 install.packages("ggplot2")
 library(ggplot2)
-?qplot
 
 data.1960 <- csv.data[csv.data$Year == 1960, ]
 data.2013 <- csv.data[csv.data$Year == 2013, ]
@@ -42,3 +41,8 @@ new.data.2013 <- data.frame(Country.Code = Country_Code, Life.Exp = Life_Expecta
 final.data.1960 <- merge(new.data.1960, data.1960, by.x = "Country.Code", by.y = "Country.Code")
 
 final.data.2013 <- merge(new.data.2013, data.2013, by.x = "Country.Code", by.y = "Country.Code")
+
+qplot(data = final.data.1960, x = Fertility.Rate, y = Life.Exp, color = Region, size = I(5), shape = Region, main = "Yo momma")
+
+qplot(data = final.data.2013, x = Fertility.Rate, y = Life.Exp, color = Region, size = I(5), shape = Region, main = "Yo 2nd momma")
+
